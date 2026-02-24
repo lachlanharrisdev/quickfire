@@ -11,6 +11,7 @@ import tunnel from "astro-tunnel";
 
 export default defineConfig({
     site: 'https://quickfire.lachlanharris.dev',
+    base: '/',
   integrations: [react(), tailwind({
     applyBaseStyles: false
   }), sitemap(), tunnel()],
