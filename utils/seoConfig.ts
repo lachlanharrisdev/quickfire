@@ -1,7 +1,7 @@
 import type { ManifestOptions } from "vite-plugin-pwa"
 
 export const seoConfig = {
-	baseURL: "https://lachlanharrisdev.github.io/quickfire",
+	baseURL: "https://lachlanharrisdev.github.io/quickfire/",
 	description: "Quickfire is a rapid-access information panel engineered for firefighters, by firefighters",
 	type: "website",
 	image: {

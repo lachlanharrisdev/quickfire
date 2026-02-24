@@ -10,7 +10,8 @@ import { manifest, seoConfig } from "./utils/seoConfig";
 import tunnel from "astro-tunnel";
 
 export default defineConfig({
-  site: seoConfig.baseURL,
+    site: 'https://lachlanharrisdev.github.io',
+    base: '/quickfire',
   integrations: [react(), tailwind({
     applyBaseStyles: false
   }), sitemap(), tunnel()],
