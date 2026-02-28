@@ -1,35 +1,64 @@
-import { Droplets, Wind, Thermometer } from "lucide-react"
+import { Droplets, Wind, Thermometer } from "lucide-react";
 
 export function WeatherWidget() {
   return (
-    <div className="h-full flex flex-col items-center justify-center text-center px-2">
-      <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-        <Thermometer className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary" />
-        <div>
-          <p className="text-2xl sm:text-3xl md:text-4xl font-bold">--°C</p>
-          <p className="text-sm sm:text-base text-muted-foreground">Feels like --°C</p>
+    <div className="h-full flex flex-col items-center justify-center text-center px-3 py-2">
+      {/* primary temp */}
+      <div className="flex items-center gap-3 mb-3 sm:mb-6">
+        <Thermometer className="w-8 h-8 sm:w-12 sm:h-12 text-primary" />
+        <div className="text-left">
+          <p className="data-label text-[10px] sm:text-xs mb-0.5">
+            TEMPERATURE
+          </p>
+          <p className="font-tactical-bold text-3xl sm:text-5xl text-primary tracking-wide">
+            --°<span className="text-xl sm:text-3xl">C</span>
+          </p>
+          <p className="font-tactical text-xs sm:text-sm text-muted-foreground">
+            FEELS LIKE --°C
+          </p>
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-2 sm:gap-4 w-full max-w-xs">
-        <div className="flex items-center gap-2 sm:gap-3 p-2 sm:p-4 bg-secondary rounded-xl">
-          <Droplets className="w-6 h-6 sm:w-8 sm:h-8 text-primary shrink-0" />
-          <div className="text-left">
-            <p className="text-xs sm:text-sm text-muted-foreground">Humidity</p>
-            <p className="text-lg sm:text-xl md:text-2xl font-bold">--%</p>
+      {/* other readings */}
+      <div className="grid grid-cols-2 gap-2 sm:gap-3 w-full max-w-sm">
+        <div className="card-tactical p-2 sm:p-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Droplets className="w-5 h-5 sm:w-6 sm:h-6 text-primary shrink-0" />
+            <div className="text-left">
+              <p className="data-label text-[10px] sm:text-xs">HUMIDITY</p>
+              <p className="font-tactical-bold text-lg sm:text-2xl text-foreground">
+                --
+                <span className="text-xs sm:text-sm text-muted-foreground">
+                  %
+                </span>
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 sm:gap-3 p-2 sm:p-4 bg-secondary rounded-xl">
-          <Wind className="w-6 h-6 sm:w-8 sm:h-8 text-primary shrink-0" />
-          <div className="text-left">
-            <p className="text-xs sm:text-sm text-muted-foreground">Wind</p>
-            <p className="text-lg sm:text-xl md:text-2xl font-bold">-- km/h</p>
+        <div className="card-tactical p-2 sm:p-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Wind className="w-5 h-5 sm:w-6 sm:h-6 text-primary shrink-0" />
+            <div className="text-left">
+              <p className="data-label text-[10px] sm:text-xs">WIND</p>
+              <p className="font-tactical-bold text-lg sm:text-2xl text-foreground">
+                --
+                <span className="text-xs sm:text-sm text-muted-foreground">
+                  {" "}
+                  KM/H
+                </span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
-      <p className="text-sm sm:text-base text-muted-foreground mt-4 sm:mt-6">Updated: --</p>
+      {/* lack of bothered notice */}
+      <div className="mt-2 sm:mt-4 px-2 py-1 sm:px-3 sm:py-2 bg-secondary/30 rounded-sm border border-border/50">
+        <p className="font-tactical text-[10px] sm:text-xs text-muted-foreground">
+          WEATHER API NOT CONNECTED
+        </p>
+      </div>
     </div>
-  )
+  );
 }

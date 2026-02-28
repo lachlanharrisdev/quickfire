@@ -1,34 +1,81 @@
-import { Sun, Sunset, Moon } from "lucide-react"
+import { Sun, Sunset, Moon, Clock } from "lucide-react";
 
 export function SunWidget() {
   return (
-    <div className="h-full flex flex-col items-center justify-center text-center px-2">
-      <div className="grid grid-cols-3 gap-2 sm:gap-4 w-full max-w-sm mb-4 sm:mb-6">
-        <div className="flex flex-col items-center justify-center p-2 sm:p-4 bg-secondary rounded-xl">
-          <Sun className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-primary mb-1 sm:mb-2" />
-          <p className="text-xs sm:text-sm text-muted-foreground">Sunrise</p>
-          <p className="text-base sm:text-lg md:text-2xl font-bold">--:--</p>
+    <div className="h-full flex flex-col items-center justify-center px-3 py-2 sm:px-4 sm:py-3">
+      <div className="grid grid-cols-3 gap-1.5 sm:gap-2 w-full max-w-md mb-2 sm:mb-4">
+        {/* sunrise */}
+        <div className="card-tactical p-2 sm:p-3">
+          <div className="flex flex-col items-center text-center">
+            <Sun className="w-5 h-5 sm:w-6 sm:h-6 text-accent mb-1 sm:mb-2" />
+            <p className="data-label text-[10px] sm:text-xs mb-0.5 sm:mb-1">
+              SUNRISE
+            </p>
+            <p className="font-tactical-bold text-base sm:text-xl text-foreground">
+              --:--
+            </p>
+          </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center p-2 sm:p-4 bg-secondary rounded-xl">
-          <Sunset className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-primary mb-1 sm:mb-2" />
-          <p className="text-xs sm:text-sm text-muted-foreground">Sunset</p>
-          <p className="text-base sm:text-lg md:text-2xl font-bold">--:--</p>
+        {/* Sunset */}
+        <div className="card-tactical p-2 sm:p-3">
+          <div className="flex flex-col items-center text-center">
+            <Sunset className="w-5 h-5 sm:w-6 sm:h-6 text-accent mb-1 sm:mb-2" />
+            <p className="data-label text-[10px] sm:text-xs mb-0.5 sm:mb-1">
+              SUNSET
+            </p>
+            <p className="font-tactical-bold text-base sm:text-xl text-foreground">
+              --:--
+            </p>
+          </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center p-2 sm:p-4 bg-secondary rounded-xl">
-          <Moon className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-primary mb-1 sm:mb-2" />
-          <p className="text-xs sm:text-sm text-muted-foreground">Twilight</p>
-          <p className="text-base sm:text-lg md:text-2xl font-bold">--:--</p>
+        {/* twilight */}
+        <div className="card-tactical p-2 sm:p-3">
+          <div className="flex flex-col items-center text-center">
+            <Moon className="w-5 h-5 sm:w-6 sm:h-6 text-primary mb-1 sm:mb-2" />
+            <p className="data-label text-[10px] sm:text-xs mb-0.5 sm:mb-1">
+              TWILIGHT
+            </p>
+            <p className="font-tactical-bold text-base sm:text-xl text-foreground">
+              --:--
+            </p>
+          </div>
         </div>
       </div>
 
-      <div className="w-full max-w-sm p-3 sm:p-4 bg-secondary rounded-xl">
-        <div className="flex justify-between text-sm sm:text-base">
-          <span className="text-muted-foreground">Daylight remaining</span>
-          <span className="font-bold">--h --m</span>
+      {/* time remaining */}
+      <div className="card-tactical-warning p-2.5 sm:p-4 w-full max-w-md">
+        <div className="flex items-center gap-2 sm:gap-4">
+          <Clock className="w-6 h-6 sm:w-8 sm:h-8 text-accent shrink-0" />
+          <div className="flex-1">
+            <p className="data-label text-[10px] sm:text-xs mb-0.5 sm:mb-1">
+              DAYLIGHT REMAINING
+            </p>
+            <div className="flex items-baseline gap-0.5 sm:gap-1">
+              <span className="font-tactical-bold text-2xl sm:text-3xl text-accent">
+                --
+              </span>
+              <span className="font-tactical text-sm sm:text-lg text-muted-foreground">
+                H
+              </span>
+              <span className="font-tactical-bold text-2xl sm:text-3xl text-accent ml-1 sm:ml-2">
+                --
+              </span>
+              <span className="font-tactical text-sm sm:text-lg text-muted-foreground">
+                M
+              </span>
+            </div>
+          </div>
         </div>
+      </div>
+
+      {/* notice for not being bothered */}
+      <div className="mt-2 sm:mt-4 px-2 sm:px-3 py-1.5 sm:py-2 bg-secondary/30 rounded-sm border border-border/50">
+        <p className="font-tactical text-[10px] sm:text-xs text-muted-foreground">
+          SUN DATA NOT IMPLEMENTED
+        </p>
       </div>
     </div>
-  )
+  );
 }

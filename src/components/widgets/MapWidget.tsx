@@ -1,15 +1,23 @@
-import { Map } from "lucide-react"
+import { Map, Maximize2 } from "lucide-react";
 
 export function MapWidget() {
   return (
-    <div className="h-full flex flex-col items-center justify-center text-center px-2">
-      <div className="flex-1 w-full flex items-center justify-center bg-secondary rounded-xl">
-        <div className="text-muted-foreground">
-          <Map className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto mb-2 sm:mb-4 opacity-50" />
-          <p className="text-base sm:text-lg md:text-xl font-medium">Map View</p>
-          <p className="text-sm sm:text-base">Tap to expand</p>
+    <div className="h-full flex flex-col px-4 py-3 pb-10">
+      <div className="flex-1 w-full relative card-tactical overflow-hidden">
+        {/* grid pattern */}
+        <div className="absolute inset-0 grid-pattern opacity-30" />
+
+        {/* placeholder */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <Map className="w-14 h-14 sm:w-16 sm:h-16 text-primary opacity-60 mb-3" />
+          <p className="font-tactical-bold text-lg text-foreground tracking-wide mb-1">
+            MAP VIEW
+          </p>
+          <p className="font-tactical text-sm text-muted-foreground">
+            TAP TO EXPAND
+          </p>
         </div>
       </div>
     </div>
-  )
+  );
 }

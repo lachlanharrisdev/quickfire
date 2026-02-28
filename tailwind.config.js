@@ -7,6 +7,10 @@ module.exports = {
     		screens: {
     			sm: '400px'
     		},
+    		fontFamily: {
+    			tactical: ['"Rajdhani"', '"Barlow Condensed"', 'system-ui', 'sans-serif'],
+    			sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
+    		},
     		borderRadius: {
     			lg: 'var(--radius)',
     			md: 'calc(var(--radius) - 2px)',
@@ -43,7 +47,18 @@ module.exports = {
     				DEFAULT: 'hsl(var(--destructive))',
     				foreground: 'hsl(var(--destructive-foreground))'
     			},
-    			border: 'hsl(var(--border))',
+    			warning: {
+    				DEFAULT: 'hsl(var(--warning))',
+    				foreground: 'hsl(var(--warning-foreground))'
+    			},
+    			success: {
+    				DEFAULT: 'hsl(var(--success))',
+    				foreground: 'hsl(var(--success-foreground))'
+    			},
+    			border: {
+    				DEFAULT: 'hsl(var(--border))',
+    				accent: 'hsl(var(--border-accent))'
+    			},
     			input: 'hsl(var(--input))',
     			ring: 'hsl(var(--ring))',
     			chart: {
@@ -53,7 +68,17 @@ module.exports = {
     				'4': 'hsl(var(--chart-4))',
     				'5': 'hsl(var(--chart-5))'
     			}
-    		}
+    		},
+    		animation: {
+    			'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+    			'pulse-acquire': 'pulse-acquire 2s ease-in-out infinite',
+    		},
+    		keyframes: {
+    			'pulse-acquire': {
+    				'0%, 100%': { opacity: '0.2' },
+    				'50%': { opacity: '0.5' },
+    			},
+    		},
     	}
     },
 	plugins: [require("tailwindcss-animate")],

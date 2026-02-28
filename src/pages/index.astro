@@ -1,10 +1,12 @@
 ---
-import { Layout } from "@globals"
-import { HomePage } from "@/components/HomePage"
+import Layout from "@/components/Layout.astro";
+import { HomePage } from "@/components/HomePage";
 ---
 
 <Layout title="Quickfire">
-	<section class="p-3 pb-0 flex-1 flex flex-col gap-2 w-full max-w-xl mx-auto min-h-0">
-		<HomePage client:load />
-	</section>
+  <section
+    class="p-3 pb-0 flex-1 flex flex-col gap-2 w-full max-w-xl mx-auto min-h-0"
+  >
+    <HomePage client:load />
+  </section>
 </Layout>

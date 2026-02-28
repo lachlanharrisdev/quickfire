@@ -1,0 +1,25 @@
+---
+import Layout from "@/components/Layout.astro";
+import { CalcPlaceholder } from "@/components/CalcPlaceholder";
+
+export function getStaticPaths() {
+  return [
+    { params: { slug: "flow-rate" }, props: { name: "Flow Rate" } },
+    { params: { slug: "fire-danger" }, props: { name: "Fire Danger" } },
+    { params: { slug: "fire-speed" }, props: { name: "Fire Speed" } },
+    { params: { slug: "pressure" }, props: { name: "Pressure Loss" } },
+    { params: { slug: "eta" }, props: { name: "ETA" } },
+    { params: { slug: "distance" }, props: { name: "Distance" } },
+  ];
+}
+
+const { name } = Astro.props;
+---
+
+<Layout title={`${name} | Quickfire`}>
+  <section
+    class="p-3 pb-0 flex-1 flex flex-col gap-2 w-full max-w-xl mx-auto min-h-0"
+  >
+    <CalcPlaceholder client:load name={name} />
+  </section>
+</Layout>

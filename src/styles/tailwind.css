@@ -2,6 +2,14 @@
 @import "@fontsource/inter/500.css";
 @import "@fontsource/inter/600.css";
 @import "@fontsource/inter/700.css";
+@import "@fontsource/rajdhani/400.css";
+@import "@fontsource/rajdhani/500.css";
+@import "@fontsource/rajdhani/600.css";
+@import "@fontsource/rajdhani/700.css";
+@import "@fontsource/barlow-condensed/400.css";
+@import "@fontsource/barlow-condensed/500.css";
+@import "@fontsource/barlow-condensed/600.css";
+@import "@fontsource/barlow-condensed/700.css";
 
 @tailwind base;
 @tailwind components;
@@ -9,48 +17,81 @@
 
 @layer base {
   :root {
-    --background: 220 20% 10%;
-    --foreground: 200 20% 95%;
-    --card: 220 20% 14%;
-    --card-foreground: 200 20% 95%;
-    --popover: 220 20% 14%;
-    --popover-foreground: 200 20% 95%;
-    --primary: 185 80% 50%;
-    --primary-foreground: 220 20% 10%;
-    --secondary: 220 15% 22%;
-    --secondary-foreground: 200 20% 90%;
-    --muted: 220 15% 18%;
-    --muted-foreground: 200 10% 60%;
-    --accent: 185 80% 50%;
-    --accent-foreground: 220 20% 10%;
-    --destructive: 330 80% 55%;
-    --destructive-foreground: 200 20% 95%;
-    --border: 220 15% 25%;
-    --input: 220 15% 25%;
-    --ring: 185 80% 50%;
-    --radius: 1rem;
+    /* Warm dark charcoal base - better in smoke/sunlight */
+    --background: 30 8% 7%;
+    --foreground: 45 10% 95%;
+
+    /* Card with subtle warm tint */
+    --card: 30 8% 11%;
+    --card-foreground: 45 10% 95%;
+
+    --popover: 30 8% 11%;
+    --popover-foreground: 45 10% 95%;
+
+    /* Primary: Tactical cyan for live data */
+    --primary: 185 80% 55%;
+    --primary-foreground: 30 8% 7%;
+
+    /* Secondary: Darker warm panel */
+    --secondary: 30 6% 15%;
+    --secondary-foreground: 45 10% 85%;
+
+    /* Muted: Warm gray for labels */
+    --muted: 30 5% 18%;
+    --muted-foreground: 40 8% 65%;
+
+    /* Accent: Amber/orange for warnings and secondary indicators */
+    --accent: 38 92% 55%;
+    --accent-foreground: 30 8% 7%;
+
+    /* Destructive: Red reserved for alerts only */
+    --destructive: 0 85% 55%;
+    --destructive-foreground: 45 10% 95%;
+
+    /* Warning: Amber for caution states */
+    --warning: 38 92% 55%;
+    --warning-foreground: 30 8% 7%;
+
+    /* Success: Muted green for positive states */
+    --success: 145 60% 45%;
+    --success-foreground: 30 8% 7%;
+
+    /* Tactical border with subtle visibility */
+    --border: 30 6% 22%;
+    --border-accent: 185 80% 55%;
+
+    --input: 30 6% 22%;
+    --ring: 185 80% 55%;
+    --radius: 0.5rem;
+
+    /* Chart colors following tactical palette */
+    --chart-1: 185 80% 55%;
+    --chart-2: 38 92% 55%;
+    --chart-3: 145 60% 45%;
+    --chart-4: 0 85% 55%;
+    --chart-5: 280 70% 55%;
   }
 
   .light {
-    --background: 200 20% 98%;
-    --foreground: 220 20% 10%;
-    --card: 200 20% 100%;
-    --card-foreground: 220 20% 10%;
-    --popover: 200 20% 100%;
-    --popover-foreground: 220 20% 10%;
-    --primary: 200 90% 35%;
-    --primary-foreground: 200 20% 98%;
-    --secondary: 200 15% 90%;
-    --secondary-foreground: 220 20% 15%;
-    --muted: 200 15% 92%;
-    --muted-foreground: 220 15% 40%;
-    --accent: 200 90% 35%;
-    --accent-foreground: 200 20% 98%;
-    --destructive: 330 80% 45%;
-    --destructive-foreground: 200 20% 98%;
-    --border: 200 15% 85%;
-    --input: 200 15% 85%;
-    --ring: 200 90% 35%;
+    --background: 45 15% 95%;
+    --foreground: 30 8% 10%;
+    --card: 45 15% 98%;
+    --card-foreground: 30 8% 10%;
+    --popover: 45 15% 98%;
+    --popover-foreground: 30 8% 10%;
+    --primary: 185 90% 35%;
+    --primary-foreground: 45 15% 95%;
+    --secondary: 45 10% 88%;
+    --secondary-foreground: 30 8% 15%;
+    --muted: 45 10% 90%;
+    --muted-foreground: 30 6% 40%;
+    --accent: 38 92% 45%;
+    --accent-foreground: 45 15% 95%;
+    --destructive: 0 85% 45%;
+    --destructive-foreground: 45 15% 95%;
+    --border: 45 10% 80%;
+    --input: 45 10% 80%;
+    --ring: 185 90% 35%;
   }
 
   * {
@@ -68,8 +109,163 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
+  /* Larger minimum touch targets for glove operation */
   button, a, [role="button"] {
-    @apply min-h-[44px] min-w-[44px];
+    @apply min-h-[48px] min-w-[48px];
+  }
+}
+
+@layer components {
+  /* Tactical monospace font for data readouts */
+  .font-tactical {
+    font-family: "Rajdhani", "Barlow Condensed", system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .font-tactical-bold {
+    font-family: "Rajdhani", "Barlow Condensed", system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  /* Instrument panel card styling */
+  .card-tactical {
+    @apply relative overflow-hidden;
+    @apply bg-card border-l-4 border-l-primary border-y border-r border-border;
+    @apply rounded-sm;
+  }
+
+  .card-tactical-warning {
+    @apply relative overflow-hidden;
+    @apply bg-card border-l-4 border-l-accent border-y border-r border-border;
+    @apply rounded-sm;
+  }
+
+  .card-tactical-alert {
+    @apply relative overflow-hidden;
+    @apply bg-card border-l-4 border-l-destructive border-y border-r border-border;
+    @apply rounded-sm;
+  }
+
+  /* Subtle scanline overlay for instrument feel */
+  .scanlines::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 2px,
+      rgba(0, 0, 0, 0.03) 4px
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Noise texture overlay */
+  .noise::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.015;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Grid pattern for tactical cards */
+  .grid-pattern {
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.3) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.3) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  /* Data display styling */
+  .data-value {
+    @apply font-tactical text-foreground;
+  }
+
+  .data-value-primary {
+    @apply font-tactical-bold text-primary;
+  }
+
+  .data-value-accent {
+    @apply font-tactical-bold text-accent;
+  }
+
+  .data-label {
+    @apply text-sm font-medium uppercase tracking-wider text-muted-foreground;
+  }
+
+  /* Pulsing indicator for acquiring/loading states */
+  .acquiring {
+    @apply relative;
+  }
+
+  .acquiring::before {
+    content: "";
+    @apply absolute inset-0 rounded-inherit;
+    @apply bg-primary/20;
+    animation: pulse-acquire 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-acquire {
+    0%, 100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  /* Status indicators */
+  .status-dot {
+    @apply w-2.5 h-2.5 rounded-full;
+  }
+
+  .status-dot-active {
+    @apply bg-primary shadow-[0_0_8px_hsl(var(--primary))];
+    animation: pulse-status 2s ease-in-out infinite;
+  }
+
+  .status-dot-warning {
+    @apply bg-accent shadow-[0_0_8px_hsl(var(--accent))];
+    animation: pulse-status 1.5s ease-in-out infinite;
+  }
+
+  .status-dot-alert {
+    @apply bg-destructive shadow-[0_0_8px_hsl(var(--destructive))];
+    animation: pulse-status 1s ease-in-out infinite;
+  }
+
+  @keyframes pulse-status {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(1.1);
+    }
+  }
+
+  /* Navigation tab styling */
+  .nav-tab {
+    @apply flex items-center justify-center gap-2;
+    @apply px-4 py-2 rounded-sm;
+    @apply text-sm font-medium uppercase tracking-wider;
+    @apply transition-colors duration-150;
+  }
+
+  .nav-tab-active {
+    @apply bg-primary/20 text-primary border-b-2 border-primary;
+  }
+
+  .nav-tab-inactive {
+    @apply text-muted-foreground hover:text-foreground hover:bg-secondary;
   }
 }
 
@@ -82,11 +278,47 @@
     padding-top: env(safe-area-inset-top, 0);
   }
 
+  /* Touch targets optimized for glove use - 60-72px minimum */
   .touch-target {
-    @apply min-h-[56px] min-w-[56px];
+    @apply min-h-[60px] min-w-[60px];
   }
 
+  /* Large touch targets for stressed/impaired use - 80px+ */
   .touch-target-lg {
-    @apply min-h-[64px] min-w-[64px];
+    @apply min-h-[80px] min-w-[80px];
+  }
+
+  /* Extra large for critical actions */
+  .touch-target-xl {
+    @apply min-h-[96px] min-w-[96px];
+  }
+
+  /* High contrast text utilities */
+  .text-high-contrast {
+    @apply text-white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Warm gray text for better smoke visibility */
+  .text-warm-gray {
+    color: hsl(40 8% 65%);
+  }
+
+  /* Accent border utilities */
+  .border-l-accent-primary {
+    @apply border-l-4 border-l-primary;
+  }
+
+  .border-l-accent-warning {
+    @apply border-l-4 border-l-accent;
+  }
+
+  .border-l-accent-alert {
+    @apply border-l-4 border-l-destructive;
+  }
+
+  /* Rounded inherit for child elements */
+  .rounded-inherit {
+    border-radius: inherit;
   }
 }

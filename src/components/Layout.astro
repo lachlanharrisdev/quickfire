@@ -1,0 +1,71 @@
+---
+import "@/styles/tailwind.css";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no"
+    />
+    <meta name="theme-color" content="#15191f" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <title>{title}</title>
+    <meta
+      name="description"
+      content="Emergency field information for RFS firefighters"
+    />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <script is:inline src="/registerSW.js"></script>
+  </head>
+  <body
+    class="fixed inset-0 flex flex-col overflow-hidden bg-background text-foreground"
+  >
+    <main class="flex flex-1 flex-col w-full min-h-0">
+      <slot />
+    </main>
+    <script is:inline>
+      // Theme persistence
+      const t = localStorage.getItem("theme");
+      if (t === "light") document.documentElement.classList.add("light");
+
+      // Global haptic feedback
+      function isHapticEnabled() {
+        const stored = localStorage.getItem("haptic-enabled");
+        return stored === null ? true : stored === "true";
+      }
+
+      function haptic() {
+        if (!isHapticEnabled()) return;
+        if (!navigator.vibrate) return;
+        navigator.vibrate(10);
+      }
+
+      document.addEventListener(
+        "click",
+        function (e) {
+          const target = e.target;
+          if (
+            target.closest(
+              "button, a, [role='button'], input[type='checkbox'], label",
+            )
+          ) {
+            haptic();
+          }
+        },
+        true,
+      );
+    </script>
+  </body>
+</html>
