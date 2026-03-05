@@ -16,7 +16,7 @@ export function Navbar({ active = "home" }: NavbarProps) {
             <a
                 href="/calculators"
                 className={cn(
-                    "relative z-10 flex-1 h-20 flex flex-col items-center justify-center gap-1 transition-colors select-none touch-target",
+                    "relative z-10 flex-1 h-20 flex flex-col items-center justify-center transition-colors select-none touch-target",
                     active === "calculators"
                         ? "bg-primary/20 text-primary border-t-2 border-primary"
                         : "text-muted-foreground hover:text-foreground hover:bg-secondary/50 active:bg-primary/10 border-t-2 border-transparent",
@@ -25,7 +25,7 @@ export function Navbar({ active = "home" }: NavbarProps) {
             >
                 <Calculator className="w-7 h-7 sm:w-8 sm:h-8" />
                 <span className="font-tactical text-xs sm:text-sm uppercase tracking-wider">
-                    Calc
+                    Calculators
                 </span>
             </a>
 
@@ -33,11 +33,11 @@ export function Navbar({ active = "home" }: NavbarProps) {
             <a
                 href="/"
                 className={cn(
-                    "relative z-20 flex flex-col items-center justify-center gap-0.5 -mt-3 -mb-3 mx-1 w-36 h-[101px] rounded-sm transition-colors select-none",
+                    "relative z-20 flex flex-col items-center justify-center -mt-3 -mb-3 w-36 h-[101px] rounded-sm transition-colors select-none",
                     "bg-card border-2",
                     active === "home"
                         ? "border-primary text-primary shadow-[0_0_16px_hsl(var(--primary)/0.2)]"
-                        : "border-border text-muted-foreground hover:text-foreground hover:border-primary/50 active:bg-primary/10",
+                        : "border-border text-muted-foreground hover:text-foreground hover:border-primary/50",
                 )}
                 draggable={false}
             >
@@ -51,7 +51,7 @@ export function Navbar({ active = "home" }: NavbarProps) {
             <a
                 href="/settings"
                 className={cn(
-                    "relative z-10 flex-1 h-20 flex flex-col items-center justify-center gap-1 transition-colors select-none touch-target",
+                    "relative z-10 flex-1 h-20 flex flex-col items-center justify-center transition-colors select-none touch-target",
                     active === "settings"
                         ? "bg-primary/20 text-primary border-t-2 border-primary"
                         : "text-muted-foreground hover:text-foreground hover:bg-secondary/50 active:bg-primary/10 border-t-2 border-transparent",

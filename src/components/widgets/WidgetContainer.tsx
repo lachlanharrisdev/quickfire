@@ -36,7 +36,7 @@ export function WidgetContainer({
             onTouchStart={onTouchStart}
             onTouchEnd={onTouchEnd}
             className={cn(
-                "relative overflow-hidden rounded-sm bg-card border border-border",
+                "relative overflow-hidden rounded-xl bg-card border border-border",
                 className,
             )}
         >
@@ -67,9 +67,10 @@ export function WidgetContainer({
 
                 {/* pagination */}
                 <div className="flex-1 flex flex-col items-center justify-center gap-1">
+                    {/*
                     <span className="font-tactical text-sm text-foreground uppercase tracking-wider">
                         {labels[active]}
-                    </span>
+                    </span>*/}
                     <div className="flex items-center gap-4">
                         {labels.map((label, i) => (
                             <button
