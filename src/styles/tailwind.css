@@ -16,309 +16,327 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    /* Warm dark charcoal base - better in smoke/sunlight */
-    --background: 30 8% 7%;
-    --foreground: 45 10% 95%;
+    :root {
+        /* Warm dark charcoal base - better in smoke/sunlight */
+        --background: 30 8% 7%;
+        --foreground: 45 10% 95%;
 
-    /* Card with subtle warm tint */
-    --card: 30 8% 11%;
-    --card-foreground: 45 10% 95%;
+        /* Card with subtle warm tint */
+        --card: 30 8% 11%;
+        --card-foreground: 45 10% 95%;
 
-    --popover: 30 8% 11%;
-    --popover-foreground: 45 10% 95%;
+        --popover: 30 8% 11%;
+        --popover-foreground: 45 10% 95%;
 
-    /* Primary: Tactical cyan for live data */
-    --primary: 185 80% 55%;
-    --primary-foreground: 30 8% 7%;
+        /* Primary: Tactical cyan for live data */
+        --primary: 185 80% 55%;
+        --primary-foreground: 30 8% 7%;
 
-    /* Secondary: Darker warm panel */
-    --secondary: 30 6% 15%;
-    --secondary-foreground: 45 10% 85%;
+        /* Secondary: Darker warm panel */
+        --secondary: 30 6% 15%;
+        --secondary-foreground: 45 10% 85%;
 
-    /* Muted: Warm gray for labels */
-    --muted: 30 5% 18%;
-    --muted-foreground: 40 8% 65%;
+        /* Muted: Warm gray for labels */
+        --muted: 30 5% 18%;
+        --muted-foreground: 40 8% 65%;
 
-    /* Accent: Amber/orange for warnings and secondary indicators */
-    --accent: 38 92% 55%;
-    --accent-foreground: 30 8% 7%;
+        /* Accent: Amber/orange for warnings and secondary indicators */
+        --accent: 38 92% 55%;
+        --accent-foreground: 30 8% 7%;
 
-    /* Destructive: Red reserved for alerts only */
-    --destructive: 0 85% 55%;
-    --destructive-foreground: 45 10% 95%;
+        /* Destructive: Red reserved for alerts only */
+        --destructive: 0 85% 55%;
+        --destructive-foreground: 45 10% 95%;
 
-    /* Warning: Amber for caution states */
-    --warning: 38 92% 55%;
-    --warning-foreground: 30 8% 7%;
+        /* Warning: Amber for caution states */
+        --warning: 38 92% 55%;
+        --warning-foreground: 30 8% 7%;
 
-    /* Success: Muted green for positive states */
-    --success: 145 60% 45%;
-    --success-foreground: 30 8% 7%;
+        /* Success: Muted green for positive states */
+        --success: 145 60% 45%;
+        --success-foreground: 30 8% 7%;
 
-    /* Tactical border with subtle visibility */
-    --border: 30 6% 22%;
-    --border-accent: 185 80% 55%;
+        /* Tactical border with subtle visibility */
+        --border: 30 6% 22%;
+        --border-accent: 185 80% 55%;
 
-    --input: 30 6% 22%;
-    --ring: 185 80% 55%;
-    --radius: 0.5rem;
+        --input: 30 6% 22%;
+        --ring: 185 80% 55%;
+        --radius: 0.5rem;
 
-    /* Chart colors following tactical palette */
-    --chart-1: 185 80% 55%;
-    --chart-2: 38 92% 55%;
-    --chart-3: 145 60% 45%;
-    --chart-4: 0 85% 55%;
-    --chart-5: 280 70% 55%;
-  }
+        /* Chart colors following tactical palette */
+        --chart-1: 185 80% 55%;
+        --chart-2: 38 92% 55%;
+        --chart-3: 145 60% 45%;
+        --chart-4: 0 85% 55%;
+        --chart-5: 280 70% 55%;
+    }
 
-  .light {
-    --background: 45 15% 95%;
-    --foreground: 30 8% 10%;
-    --card: 45 15% 98%;
-    --card-foreground: 30 8% 10%;
-    --popover: 45 15% 98%;
-    --popover-foreground: 30 8% 10%;
-    --primary: 185 90% 35%;
-    --primary-foreground: 45 15% 95%;
-    --secondary: 45 10% 88%;
-    --secondary-foreground: 30 8% 15%;
-    --muted: 45 10% 90%;
-    --muted-foreground: 30 6% 40%;
-    --accent: 38 92% 45%;
-    --accent-foreground: 45 15% 95%;
-    --destructive: 0 85% 45%;
-    --destructive-foreground: 45 15% 95%;
-    --border: 45 10% 80%;
-    --input: 45 10% 80%;
-    --ring: 185 90% 35%;
-  }
+    .light {
+        --background: 45 15% 95%;
+        --foreground: 30 8% 10%;
+        --card: 45 15% 98%;
+        --card-foreground: 30 8% 10%;
+        --popover: 45 15% 98%;
+        --popover-foreground: 30 8% 10%;
+        --primary: 185 90% 35%;
+        --primary-foreground: 45 15% 95%;
+        --secondary: 45 10% 88%;
+        --secondary-foreground: 30 8% 15%;
+        --muted: 45 10% 90%;
+        --muted-foreground: 30 6% 40%;
+        --accent: 38 92% 45%;
+        --accent-foreground: 45 15% 95%;
+        --destructive: 0 85% 45%;
+        --destructive-foreground: 45 15% 95%;
+        --border: 45 10% 80%;
+        --input: 45 10% 80%;
+        --ring: 185 90% 35%;
+    }
 
-  * {
-    @apply border-border;
-  }
+    * {
+        @apply border-border;
+    }
 
-  html {
-    @apply scroll-smooth;
-    -webkit-tap-highlight-color: transparent;
-    font-family: "Inter", system-ui, -apple-system, sans-serif;
-  }
+    html {
+        @apply scroll-smooth;
+        -webkit-tap-highlight-color: transparent;
+        font-family:
+            "Inter",
+            system-ui,
+            -apple-system,
+            sans-serif;
+    }
 
-  body {
-    @apply bg-background text-foreground antialiased;
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
+    body {
+        @apply bg-background text-foreground antialiased;
+        font-feature-settings:
+            "rlig" 1,
+            "calt" 1;
+    }
 
-  /* Larger minimum touch targets for glove operation */
-  button, a, [role="button"] {
-    @apply min-h-[48px] min-w-[48px];
-  }
+    /* Larger minimum touch targets for glove operation */
+    button,
+    a,
+    [role="button"] {
+        @apply min-h-[48px] min-w-[48px];
+    }
 }
 
 @layer components {
-  /* Tactical monospace font for data readouts */
-  .font-tactical {
-    font-family: "Rajdhani", "Barlow Condensed", system-ui, sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-  }
-
-  .font-tactical-bold {
-    font-family: "Rajdhani", "Barlow Condensed", system-ui, sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-  }
-
-  /* Instrument panel card styling */
-  .card-tactical {
-    @apply relative overflow-hidden;
-    @apply bg-card border-l-4 border-l-primary border-y border-r border-border;
-    @apply rounded-sm;
-  }
-
-  .card-tactical-warning {
-    @apply relative overflow-hidden;
-    @apply bg-card border-l-4 border-l-accent border-y border-r border-border;
-    @apply rounded-sm;
-  }
-
-  .card-tactical-alert {
-    @apply relative overflow-hidden;
-    @apply bg-card border-l-4 border-l-destructive border-y border-r border-border;
-    @apply rounded-sm;
-  }
-
-  /* Subtle scanline overlay for instrument feel */
-  .scanlines::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(0, 0, 0, 0.03) 2px,
-      rgba(0, 0, 0, 0.03) 4px
-    );
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  /* Noise texture overlay */
-  .noise::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    opacity: 0.015;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  /* Grid pattern for tactical cards */
-  .grid-pattern {
-    background-image:
-      linear-gradient(to right, hsl(var(--border) / 0.3) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--border) / 0.3) 1px, transparent 1px);
-    background-size: 20px 20px;
-  }
-
-  /* Data display styling */
-  .data-value {
-    @apply font-tactical text-foreground;
-  }
-
-  .data-value-primary {
-    @apply font-tactical-bold text-primary;
-  }
-
-  .data-value-accent {
-    @apply font-tactical-bold text-accent;
-  }
-
-  .data-label {
-    @apply text-sm font-medium uppercase tracking-wider text-muted-foreground;
-  }
-
-  /* Pulsing indicator for acquiring/loading states */
-  .acquiring {
-    @apply relative;
-  }
-
-  .acquiring::before {
-    content: "";
-    @apply absolute inset-0 rounded-inherit;
-    @apply bg-primary/20;
-    animation: pulse-acquire 2s ease-in-out infinite;
-  }
-
-  @keyframes pulse-acquire {
-    0%, 100% {
-      opacity: 0.2;
+    /* Tactical monospace font for data readouts */
+    .font-tactical {
+        font-family: "Rajdhani", "Barlow Condensed", system-ui, sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.05em;
     }
-    50% {
-      opacity: 0.5;
+
+    .font-tactical-bold {
+        font-family: "Rajdhani", "Barlow Condensed", system-ui, sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.05em;
     }
-  }
 
-  /* Status indicators */
-  .status-dot {
-    @apply w-2.5 h-2.5 rounded-full;
-  }
-
-  .status-dot-active {
-    @apply bg-primary shadow-[0_0_8px_hsl(var(--primary))];
-    animation: pulse-status 2s ease-in-out infinite;
-  }
-
-  .status-dot-warning {
-    @apply bg-accent shadow-[0_0_8px_hsl(var(--accent))];
-    animation: pulse-status 1.5s ease-in-out infinite;
-  }
-
-  .status-dot-alert {
-    @apply bg-destructive shadow-[0_0_8px_hsl(var(--destructive))];
-    animation: pulse-status 1s ease-in-out infinite;
-  }
-
-  @keyframes pulse-status {
-    0%, 100% {
-      opacity: 1;
-      transform: scale(1);
+    /* Instrument panel card styling */
+    .card-tactical {
+        @apply relative overflow-hidden;
+        @apply bg-card border-border border-y border-x; /* for cyan left piece: border-l-4 border-l-primary border-y border-r border-border */
+        @apply rounded-sm;
     }
-    50% {
-      opacity: 0.7;
-      transform: scale(1.1);
+
+    .card-tactical-warning {
+        @apply relative overflow-hidden;
+        @apply bg-card border-border border-y border-x; /* border-l-4 border-l-accent border-y border-r border-border; */
+        @apply rounded-sm;
     }
-  }
 
-  /* Navigation tab styling */
-  .nav-tab {
-    @apply flex items-center justify-center gap-2;
-    @apply px-4 py-2 rounded-sm;
-    @apply text-sm font-medium uppercase tracking-wider;
-    @apply transition-colors duration-150;
-  }
+    .card-tactical-alert {
+        @apply relative overflow-hidden;
+        @apply bg-card border-border border-y border-x; /* border-l-4 border-l-destructive border-y border-r border-border; */
+        @apply rounded-sm;
+    }
 
-  .nav-tab-active {
-    @apply bg-primary/20 text-primary border-b-2 border-primary;
-  }
+    /* Subtle scanline overlay for instrument feel */
+    .scanlines::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 0, 0, 0.03) 2px,
+            rgba(0, 0, 0, 0.03) 4px
+        );
+        pointer-events: none;
+        z-index: 1;
+    }
 
-  .nav-tab-inactive {
-    @apply text-muted-foreground hover:text-foreground hover:bg-secondary;
-  }
+    /* Noise texture overlay */
+    .noise::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.015;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    /* Grid pattern for tactical cards */
+    .grid-pattern {
+        background-image:
+            linear-gradient(
+                to right,
+                hsl(var(--border) / 0.3) 1px,
+                transparent 1px
+            ),
+            linear-gradient(
+                to bottom,
+                hsl(var(--border) / 0.3) 1px,
+                transparent 1px
+            );
+        background-size: 20px 20px;
+    }
+
+    /* Data display styling */
+    .data-value {
+        @apply font-tactical text-foreground;
+    }
+
+    .data-value-primary {
+        @apply font-tactical-bold text-primary;
+    }
+
+    .data-value-accent {
+        @apply font-tactical-bold text-accent;
+    }
+
+    .data-label {
+        @apply text-sm font-medium uppercase tracking-wider text-muted-foreground;
+    }
+
+    /* Pulsing indicator for acquiring/loading states */
+    .acquiring {
+        @apply relative;
+    }
+
+    .acquiring::before {
+        content: "";
+        @apply absolute inset-0 rounded-inherit;
+        @apply bg-primary/20;
+        animation: pulse-acquire 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-acquire {
+        0%,
+        100% {
+            opacity: 0.2;
+        }
+        50% {
+            opacity: 0.5;
+        }
+    }
+
+    /* Status indicators */
+    .status-dot {
+        @apply w-2.5 h-2.5 rounded-full;
+    }
+
+    .status-dot-active {
+        @apply bg-primary shadow-[0_0_8px_hsl(var(--primary))];
+        animation: pulse-status 2s ease-in-out infinite;
+    }
+
+    .status-dot-warning {
+        @apply bg-accent shadow-[0_0_8px_hsl(var(--accent))];
+        animation: pulse-status 1.5s ease-in-out infinite;
+    }
+
+    .status-dot-alert {
+        @apply bg-destructive shadow-[0_0_8px_hsl(var(--destructive))];
+        animation: pulse-status 1s ease-in-out infinite;
+    }
+
+    @keyframes pulse-status {
+        0%,
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 0.7;
+            transform: scale(1.1);
+        }
+    }
+
+    /* Navigation tab styling */
+    .nav-tab {
+        @apply flex items-center justify-center gap-2;
+        @apply px-4 py-2 rounded-sm;
+        @apply text-sm font-medium uppercase tracking-wider;
+        @apply transition-colors duration-150;
+    }
+
+    .nav-tab-active {
+        @apply bg-primary/20 text-primary border-b-2 border-primary;
+    }
+
+    .nav-tab-inactive {
+        @apply text-muted-foreground hover:text-foreground hover:bg-secondary;
+    }
 }
 
 @layer utilities {
-  .safe-bottom {
-    padding-bottom: env(safe-area-inset-bottom, 0);
-  }
+    .safe-bottom {
+        padding-bottom: env(safe-area-inset-bottom, 0);
+    }
 
-  .safe-top {
-    padding-top: env(safe-area-inset-top, 0);
-  }
+    .safe-top {
+        padding-top: env(safe-area-inset-top, 0);
+    }
 
-  /* Touch targets optimized for glove use - 60-72px minimum */
-  .touch-target {
-    @apply min-h-[60px] min-w-[60px];
-  }
+    /* Touch targets optimized for glove use - 60-72px minimum */
+    .touch-target {
+        @apply min-h-[60px] min-w-[60px];
+    }
 
-  /* Large touch targets for stressed/impaired use - 80px+ */
-  .touch-target-lg {
-    @apply min-h-[80px] min-w-[80px];
-  }
+    /* Large touch targets for stressed/impaired use - 80px+ */
+    .touch-target-lg {
+        @apply min-h-[80px] min-w-[80px];
+    }
 
-  /* Extra large for critical actions */
-  .touch-target-xl {
-    @apply min-h-[96px] min-w-[96px];
-  }
+    /* Extra large for critical actions */
+    .touch-target-xl {
+        @apply min-h-[96px] min-w-[96px];
+    }
 
-  /* High contrast text utilities */
-  .text-high-contrast {
-    @apply text-white;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-  }
+    /* High contrast text utilities */
+    .text-high-contrast {
+        @apply text-white;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
 
-  /* Warm gray text for better smoke visibility */
-  .text-warm-gray {
-    color: hsl(40 8% 65%);
-  }
+    /* Warm gray text for better smoke visibility */
+    .text-warm-gray {
+        color: hsl(40 8% 65%);
+    }
 
-  /* Accent border utilities */
-  .border-l-accent-primary {
-    @apply border-l-4 border-l-primary;
-  }
+    /* Accent border utilities */
+    .border-l-accent-primary {
+        @apply border-l-4 border-l-primary;
+    }
 
-  .border-l-accent-warning {
-    @apply border-l-4 border-l-accent;
-  }
+    .border-l-accent-warning {
+        @apply border-l-4 border-l-accent;
+    }
 
-  .border-l-accent-alert {
-    @apply border-l-4 border-l-destructive;
-  }
+    .border-l-accent-alert {
+        @apply border-l-4 border-l-destructive;
+    }
 
-  /* Rounded inherit for child elements */
-  .rounded-inherit {
-    border-radius: inherit;
-  }
+    /* Rounded inherit for child elements */
+    .rounded-inherit {
+        border-radius: inherit;
+    }
 }
