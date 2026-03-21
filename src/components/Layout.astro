@@ -35,37 +35,5 @@ const { title } = Astro.props;
     <main class="flex flex-1 flex-col w-full min-h-0">
       <slot />
     </main>
-    <script is:inline>
-      // Theme persistence
-      const t = localStorage.getItem("theme");
-      if (t === "light") document.documentElement.classList.add("light");
-
-      // Global haptic feedback
-      function isHapticEnabled() {
-        const stored = localStorage.getItem("haptic-enabled");
-        return stored === null ? true : stored === "true";
-      }
-
-      function haptic() {
-        if (!isHapticEnabled()) return;
-        if (!navigator.vibrate) return;
-        navigator.vibrate(10);
-      }
-
-      document.addEventListener(
-        "click",
-        function (e) {
-          const target = e.target;
-          if (
-            target.closest(
-              "button, a, [role='button'], input[type='checkbox'], label",
-            )
-          ) {
-            haptic();
-          }
-        },
-        true,
-      );
-    </script>
   </body>
 </html>
