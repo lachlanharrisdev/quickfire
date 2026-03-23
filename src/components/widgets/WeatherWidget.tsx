@@ -11,7 +11,7 @@ export function WeatherWidget() {
                         TEMPERATURE
                     </p>
                     <p className="font-tactical-bold text-3xl sm:text-5xl text-primary tracking-wide">
-                        --°<span className="text-xl sm:text-3xl">C</span>
+                        24°<span className="text-xl sm:text-3xl">C</span>
                     </p>
                 </div>
             </div>
@@ -26,7 +26,7 @@ export function WeatherWidget() {
                                 HUMIDITY
                             </p>
                             <p className="font-tactical-bold text-lg sm:text-2xl text-foreground">
-                                --
+                                58
                                 <span className="text-xs sm:text-sm text-muted-foreground">
                                     %
                                 </span>
@@ -43,7 +43,7 @@ export function WeatherWidget() {
                                 WIND
                             </p>
                             <p className="font-tactical-bold text-lg sm:text-2xl text-foreground">
-                                --
+                                14
                                 <span className="text-xs sm:text-sm text-muted-foreground">
                                     {" "}
                                     KM/H
@@ -57,7 +57,7 @@ export function WeatherWidget() {
             {/* lack of bothered notice */}
             <div className="mt-2 sm:mt-4 px-2 py-1 sm:px-3 sm:py-2 bg-secondary/30 rounded-sm border border-border/50">
                 <p className="font-tactical text-[10px] sm:text-xs text-muted-foreground">
-                    WEATHER NOT IMPLEMENTED
+                    MOCK WEATHER DATA
                 </p>
             </div>
         </div>

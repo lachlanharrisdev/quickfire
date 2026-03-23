@@ -12,7 +12,7 @@ export function SunWidget() {
                             SUNRISE
                         </p>
                         <p className="font-tactical-bold text-base sm:text-xl text-foreground">
-                            --:--
+                            06:18
                         </p>
                     </div>
                 </div>
@@ -25,7 +25,7 @@ export function SunWidget() {
                             SUNSET
                         </p>
                         <p className="font-tactical-bold text-base sm:text-xl text-foreground">
-                            --:--
+                            19:42
                         </p>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ export function SunWidget() {
                             TWILIGHT
                         </p>
                         <p className="font-tactical-bold text-base sm:text-xl text-foreground">
-                            --:--
+                            20:11
                         </p>
                     </div>
                 </div>
@@ -54,13 +54,13 @@ export function SunWidget() {
                         </p>
                         <div className="flex items-baseline gap-0.5 sm:gap-1">
                             <span className="font-tactical-bold text-2xl sm:text-3xl text-primary">
-                                --
+                                04
                             </span>
                             <span className="font-tactical text-sm sm:text-lg text-muted-foreground">
                                 H
                             </span>
                             <span className="font-tactical-bold text-2xl sm:text-3xl text-primary ml-1 sm:ml-2">
-                                --
+                                27
                             </span>
                             <span className="font-tactical text-sm sm:text-lg text-muted-foreground">
                                 M
@@ -73,7 +73,7 @@ export function SunWidget() {
             {/* notice for not being bothered */}
             <div className="mt-2 sm:mt-4 px-2 sm:px-3 py-1.5 sm:py-2 bg-secondary/30 rounded-sm border border-border/50">
                 <p className="font-tactical text-[10px] sm:text-xs text-muted-foreground">
-                    SUN DATA NOT IMPLEMENTED
+                    SUN DATA: MOCK VALUES
                 </p>
             </div>
         </div>

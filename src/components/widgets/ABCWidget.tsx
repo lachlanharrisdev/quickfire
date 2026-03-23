@@ -10,7 +10,7 @@ export function ABCWidget() {
                     <div className="flex-1 text-left">
                         <p className="data-label text-xs mb-0.5">ALTITUDE</p>
                         <p className="font-tactical-bold text-2xl sm:text-3xl text-primary tracking-wide">
-                            --
+                            42
                             <span className="text-base text-muted-foreground">
                                 {" "}
                                 M
@@ -30,7 +30,7 @@ export function ABCWidget() {
                     <div className="flex-1 text-left">
                         <p className="data-label text-xs mb-0.5">BAROMETER</p>
                         <p className="font-tactical-bold text-2xl sm:text-3xl text-foreground tracking-wide">
-                            --
+                            1013
                             <span className="text-base text-muted-foreground">
                                 {" "}
                                 HPA
@@ -50,12 +50,12 @@ export function ABCWidget() {
                     <div className="flex-1 text-left">
                         <p className="data-label text-xs mb-0.5">COMPASS</p>
                         <p className="font-tactical-bold text-2xl sm:text-3xl text-foreground tracking-wide">
-                            --
+                            037
                             <span className="text-base text-muted-foreground">
                                 °
                             </span>
                             <span className="text-lg text-primary ml-2">
-                                --
+                                NE
                             </span>
                         </p>
                     </div>
