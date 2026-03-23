@@ -17,54 +17,46 @@
 
 @layer base {
     :root {
-        /* Warm dark charcoal base - better in smoke/sunlight */
-        --background: 30 8% 7%;
-        --foreground: 45 10% 95%;
+        /* perfect black for maximum contrast */
+        --background: 0 0% 0%;
+        /* ... and perfect white for text */
+        --foreground: 0 0% 100%;
 
-        /* Card with subtle warm tint */
-        --card: 30 8% 11%;
+        /* for widgets; slightly warmer tint to reduce eye strain */
+        --card: 30 10% 5%;
         --card-foreground: 45 10% 95%;
 
         --popover: 30 8% 11%;
         --popover-foreground: 45 10% 95%;
 
-        /* Primary: Tactical cyan for live data */
+        /* "tactical cyan" */
         --primary: 185 80% 55%;
         --primary-foreground: 30 8% 7%;
 
-        /* Secondary: Darker warm panel */
         --secondary: 30 6% 15%;
         --secondary-foreground: 45 10% 85%;
 
-        /* Muted: Warm gray for labels */
         --muted: 30 5% 18%;
         --muted-foreground: 40 8% 65%;
 
-        /* Accent: Amber/orange for warnings and secondary indicators */
-        --accent: 38 92% 55%;
-        --accent-foreground: 30 8% 7%;
-
-        /* Destructive: Red reserved for alerts only */
         --destructive: 0 85% 55%;
         --destructive-foreground: 45 10% 95%;
 
-        /* Warning: Amber for caution states */
         --warning: 38 92% 55%;
         --warning-foreground: 30 8% 7%;
 
-        /* Success: Muted green for positive states */
         --success: 145 60% 45%;
         --success-foreground: 30 8% 7%;
 
-        /* Tactical border with subtle visibility */
-        --border: 30 6% 22%;
+        /* high contrast border */
+        --border: 30 6% 18%;
         --border-accent: 185 80% 55%;
 
         --input: 30 6% 22%;
         --ring: 185 80% 55%;
         --radius: 0.5rem;
 
-        /* Chart colors following tactical palette */
+        /* unused but still kept */
         --chart-1: 185 80% 55%;
         --chart-2: 38 92% 55%;
         --chart-3: 145 60% 45%;
@@ -73,22 +65,32 @@
     }
 
     .light {
-        --background: 45 15% 95%;
-        --foreground: 30 8% 10%;
+        /* light background kept off white to reduce glare */
+        --background: 45 10% 92%;
+        /* pure back for max contrast */
+        --foreground: 0 0% 0%;
+
         --card: 45 15% 98%;
         --card-foreground: 30 8% 10%;
+
         --popover: 45 15% 98%;
         --popover-foreground: 30 8% 10%;
+
         --primary: 185 90% 35%;
         --primary-foreground: 45 15% 95%;
+
         --secondary: 45 10% 88%;
         --secondary-foreground: 30 8% 15%;
+
         --muted: 45 10% 90%;
-        --muted-foreground: 30 6% 40%;
+        --muted-foreground: 30 6% 25%;
+
         --accent: 38 92% 45%;
         --accent-foreground: 45 15% 95%;
+
         --destructive: 0 85% 45%;
         --destructive-foreground: 45 15% 95%;
+
         --border: 45 10% 80%;
         --input: 45 10% 80%;
         --ring: 185 90% 35%;
