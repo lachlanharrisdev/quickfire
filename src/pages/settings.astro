@@ -4,107 +4,130 @@ import { Navbar } from "@/components/Navbar";
 ---
 
 <Layout title="Settings | Quickfire">
-  <section
-    class="p-3 pb-0 flex-1 flex flex-col gap-2 w-full max-w-xl mx-auto min-h-0"
-  >
-    <h1 class="font-tactical-bold text-xl sm:text-2xl text-primary uppercase tracking-wider">Settings</h1>
-
-    <div
-      class="flex-1 flex flex-col gap-3 sm:gap-4 overflow-y-auto pb-2 min-h-0"
+    <section
+        class="p-3 pb-0 flex-1 flex flex-col gap-2 w-full max-w-xl mx-auto min-h-0"
     >
-      <div
-        class="card-tactical p-3 sm:p-4"
-      >
-        <h2 class="font-tactical text-base sm:text-lg uppercase tracking-wider mb-3 sm:mb-4 text-foreground">Theme</h2>
-        <div class="flex gap-2 sm:gap-3">
-          <button
-            id="theme-dark"
-            class="flex-1 flex flex-col items-center justify-center gap-1 sm:gap-2 p-3 sm:p-4 bg-secondary rounded-sm active:scale-95 transition-transform border-2 border-primary"
-          >
-            <svg
-              class="w-6 h-6 sm:w-8 sm:h-8 text-primary"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
-            </svg>
-            <span class="font-tactical text-xs sm:text-sm uppercase tracking-wider">Dark</span>
-          </button>
-          <button
-            id="theme-light"
-            class="flex-1 flex flex-col items-center justify-center gap-1 sm:gap-2 p-3 sm:p-4 bg-secondary rounded-sm active:scale-95 transition-transform border-2 border-transparent"
-          >
-            <svg
-              class="w-6 h-6 sm:w-8 sm:h-8"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="12" cy="12" r="4"></circle>
-              <path d="M12 2v2"></path>
-              <path d="M12 20v2"></path>
-              <path d="m4.93 4.93 1.41 1.41"></path>
-              <path d="m17.66 17.66 1.41 1.41"></path>
-              <path d="M2 12h2"></path>
-              <path d="M20 12h2"></path>
-              <path d="m6.34 17.66-1.41 1.41"></path>
-              <path d="m19.07 4.93-1.41 1.41"></path>
-            </svg>
-            <span class="font-tactical text-xs sm:text-sm uppercase tracking-wider">Light</span>
-          </button>
+        <h1
+            class="font-tactical-bold text-xl sm:text-2xl text-primary uppercase tracking-wider"
+        >
+            Settings
+        </h1>
+
+        <div
+            class="flex-1 flex flex-col gap-3 sm:gap-4 overflow-y-auto pb-2 min-h-0"
+        >
+            <div class="card-tactical p-3 sm:p-4">
+                <h2
+                    class="font-tactical text-base sm:text-lg uppercase tracking-wider mb-3 sm:mb-4 text-foreground"
+                >
+                    Theme
+                </h2>
+                <div class="flex gap-2 sm:gap-3">
+                    <button
+                        id="theme-dark"
+                        class="flex-1 flex flex-col items-center justify-center gap-1 sm:gap-2 p-3 sm:p-4 bg-secondary rounded-sm active:scale-95 transition-transform border-2 border-primary"
+                    >
+                        <svg
+                            class="w-6 h-6 sm:w-8 sm:h-8 text-primary"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                        </svg>
+                        <span
+                            class="font-tactical text-xs sm:text-sm uppercase tracking-wider"
+                            >Dark</span
+                        >
+                    </button>
+                    <button
+                        id="theme-light"
+                        class="flex-1 flex flex-col items-center justify-center gap-1 sm:gap-2 p-3 sm:p-4 bg-secondary rounded-sm active:scale-95 transition-transform border-2 border-transparent"
+                    >
+                        <svg
+                            class="w-6 h-6 sm:w-8 sm:h-8"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <path d="M12 2v2"></path>
+                            <path d="M12 20v2"></path>
+                            <path d="m4.93 4.93 1.41 1.41"></path>
+                            <path d="m17.66 17.66 1.41 1.41"></path>
+                            <path d="M2 12h2"></path>
+                            <path d="M20 12h2"></path>
+                            <path d="m6.34 17.66-1.41 1.41"></path>
+                            <path d="m19.07 4.93-1.41 1.41"></path>
+                        </svg>
+                        <span
+                            class="font-tactical text-xs sm:text-sm uppercase tracking-wider"
+                            >Light</span
+                        >
+                    </button>
+                </div>
+            </div>
+
+            <div class="card-tactical p-3 sm:p-4">
+                <h2
+                    class="font-tactical text-base sm:text-lg uppercase tracking-wider mb-1 sm:mb-2 text-foreground"
+                >
+                    About
+                </h2>
+                <p
+                    class="text-xs sm:text-sm text-muted-foreground font-tactical"
+                >
+                    Quickfire v0.1.4-rc
+                </p>
+                <p class="text-xs sm:text-sm text-muted-foreground mt-1">
+                    A rapid-access information panel built for firefighters, by
+                    firefighters
+                </p>
+            </div>
+
+            <div class="card-tactical p-3 sm:p-4">
+                <h2
+                    class="font-tactical text-base sm:text-lg uppercase tracking-wider mb-1 sm:mb-2 text-foreground"
+                >
+                    Server Status
+                </h2>
+                <div class="flex items-center gap-2">
+                    <span class="status-dot status-dot-active"></span>
+                    <span class="text-xs sm:text-sm text-muted-foreground"
+                        >Online</span
+                    >
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div
-        class="card-tactical p-3 sm:p-4"
-      >
-        <h2 class="font-tactical text-base sm:text-lg uppercase tracking-wider mb-1 sm:mb-2 text-foreground">About</h2>
-        <p class="text-xs sm:text-sm text-muted-foreground font-tactical">Quickfire v0.1.0-dev.1</p>
-        <p class="text-xs sm:text-sm text-muted-foreground mt-1">
-          A rapid-access information panel built for firefighters, by firefighters
-        </p>
-      </div>
-
-      <div
-        class="card-tactical p-3 sm:p-4"
-      >
-        <h2 class="font-tactical text-base sm:text-lg uppercase tracking-wider mb-1 sm:mb-2 text-foreground">Server Status</h2>
-        <div class="flex items-center gap-2">
-          <span class="status-dot status-dot-active"></span>
-          <span class="text-xs sm:text-sm text-muted-foreground">Online</span>
-        </div>
-      </div>
-    </div>
-
-    <Navbar client:load active="settings" />
-  </section>
+        <Navbar client:load active="settings" />
+    </section>
 </Layout>
 
 <script>
-  const darkBtn = document.getElementById("theme-dark");
-  const lightBtn = document.getElementById("theme-light");
+    const darkBtn = document.getElementById("theme-dark");
+    const lightBtn = document.getElementById("theme-light");
 
-  function setTheme(theme: "dark" | "light") {
-    document.documentElement.classList.toggle("light", theme === "light");
-    localStorage.setItem("theme", theme);
-    darkBtn?.classList.toggle("border-primary", theme === "dark");
-    darkBtn?.classList.toggle("border-transparent", theme !== "dark");
-    lightBtn?.classList.toggle("border-primary", theme === "light");
-    lightBtn?.classList.toggle("border-transparent", theme !== "light");
-  }
+    function setTheme(theme: "dark" | "light") {
+        document.documentElement.classList.toggle("light", theme === "light");
+        localStorage.setItem("theme", theme);
+        darkBtn?.classList.toggle("border-primary", theme === "dark");
+        darkBtn?.classList.toggle("border-transparent", theme !== "dark");
+        lightBtn?.classList.toggle("border-primary", theme === "light");
+        lightBtn?.classList.toggle("border-transparent", theme !== "light");
+    }
 
-  const savedTheme = localStorage.getItem("theme") as "dark" | "light" | null;
-  if (savedTheme) setTheme(savedTheme);
+    const savedTheme = localStorage.getItem("theme") as "dark" | "light" | null;
+    if (savedTheme) setTheme(savedTheme);
 
-  darkBtn?.addEventListener("click", () => setTheme("dark"));
-  lightBtn?.addEventListener("click", () => setTheme("light"));
+    darkBtn?.addEventListener("click", () => setTheme("dark"));
+    lightBtn?.addEventListener("click", () => setTheme("light"));
 </script>
