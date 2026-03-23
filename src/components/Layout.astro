@@ -35,5 +35,10 @@ const { title } = Astro.props;
     <main class="flex flex-1 flex-col w-full min-h-0">
       <slot />
     </main>
+    <script is:inline>
+      // theme persistence
+      const t = localStorage.getItem("theme");
+      if (t === "light") document.documentElement.classList.add("light");
+    </script>
   </body>
 </html>
